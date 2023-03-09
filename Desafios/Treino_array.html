@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="campoTxt">
+    <button onclick="AddList()">Adicionar</button>
+    <button onclick="OrdenarList()">Ordenar</button>
+    <div id="lista-organizada">
+        <h2>Lista em Ordem Alfabética</h2>
+    </div>
+
+    <script>
+        var objetos = ['Cadeira', 'Impressora', 'Garfo']
+        function AddList() {
+            var lista = document.getElementById('campoTxt')
+            var verificar = objetos.indexOf(lista.value)
+            console.log(lista.value)
+            console.log(objetos)
+            if (lista.value.length == 0) {
+                alert('[ERRO] Informe um valor válido')
+            } else {
+                if (verificar >= 0) {
+                    alert('"Objeto já foi adicionado')
+                    document.getElementById('campoTxt').value = ''
+                } else {
+                    objetos.push(lista.value)
+                    document.getElementById('campoTxt').value = ''
+                }
+            }
+        }
+
+        function OrdenarList(){
+            var listOrdenada =objetos.sort((a,b)=>{
+                return a.localeCompare(b)
+            })
+            console.log(listOrdenada)
+            var resultado = document.getElementById('lista-organizada')
+
+            resultado.innerHTML= objetos
+        }
+
+    </script>
+</body>
+
+</html>
