@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: normal 15pt Arial;
+            background: linear-gradient(90deg, rgba(37, 34, 150, 1) 11%, rgba(0, 235, 236, 1) 100%);
+        }
+
+        header {
+            color: white;
+            text-align: center;
+        }
+
+        section {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            width: 500px;
+            margin: auto;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.637);
+
+        }
+
+        #msg {
+            text-align: center;
+        }
+
+
+        #card {
+            text-align: center;
+            margin-top: 30px;
+            width: 100px;
+            height: 100px;
+            border: solid;
+        }
+
+        footer {
+            color: white;
+            text-align: center;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Manipulando css pelo js</h1>
+    </header>
+
+    <section>
+        <div id="divButtonCor">
+            <h3>CORES:</h3>
+            <button onclick="modificaCor('#0026fa')">azul</button>
+            <button onclick="modificaCor('#59ff0a')">verde</button>
+            <button onclick="modificaCor('#fa0000')">vermelho</button>
+            <button onclick="modificaCor('#faef00')">amarelo</button>
+            <button onclick="modificaCor('#000000')">black</button>
+        </div>
+
+        <div id="tamanhoCard">
+            <h3>Tamanho do Card</h3>
+            <button onclick="mudarTamanho('200px', '200px')">200x200</button>
+            <button onclick="mudarTamanho('300px', '300px')">300x300</button>
+            <button onclick="mudarTamanho('50px', '50px')">50x50</button>
+        </div>
+
+        <div id="card">
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy;Pedro Pontes Developer</p>
+    </footer>
+
+    <script>
+        function modificaCor(corDeFundo) {
+            document.getElementById('card').style.background = corDeFundo
+        }
+
+        function mudarTamanho(tamanho) {
+            document.getElementById('card').style.width= tamanho
+            document.getElementById('card').style.height= tamanho
+        }
+    </script>
+</body>
+
+</html>

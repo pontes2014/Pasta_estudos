@@ -1,0 +1,41 @@
+body {
+    font: normal 15pt Arial;
+    background: radial-gradient(circle, rgba(174,238,214,1) 0%, rgba(64,138,226,1) 100%);
+}
+
+header{
+    color: white;
+    text-align: center;
+}
+
+section{
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.637);
+    
+}
+
+#card-dados{
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+}
+
+input{
+    height: 20px;
+    width: 100px;
+}
+
+#card-resposta{
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+}

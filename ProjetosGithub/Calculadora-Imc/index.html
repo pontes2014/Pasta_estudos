@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Calculadora de IMC</h1>
+    </header>
+
+    <section>
+        <div id="card-dados">
+            <p>NOME: <input type="text" id="textNome"></p>
+            <p>PESO: <input type="number" id="textPeso"></p>
+            <p>ALTURA: <input type="number" id="textAltura"></p>
+            <button onclick="calcular()">Calcular</button>
+
+        </div>
+
+        <div id="card-resposta">
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy;Pedro Pontes Developer</p>
+    </footer>
+
+    <script>
+        function calcular() {
+            var nome = document.getElementById('textNome').value
+            var altura = document.getElementById('textAltura').value
+            var peso = document.getElementById('textPeso').value
+
+            altura = Number(altura)
+            peso = Number(peso)
+
+            altura /= 100
+
+            var altura2 = altura * altura
+            var imc = peso / altura2
+            var res = document.getElementById('card-resposta')
+
+            res.innerHTML= `Ola ${nome} seu IMC é de ${imc}`
+
+            
+        }
+    </script>
+</body>
+
+</html>

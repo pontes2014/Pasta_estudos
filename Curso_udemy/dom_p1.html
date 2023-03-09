@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function distribuiCaracter() {
+            //selecionando o valor digitado
+            var caracter = document.getElementById('entradaTexto').value
+            //limpar o campo de digitacao
+            document.getElementById('entradaTexto').value = ""
+
+            caracter.trim()
+
+            switch(caracter){
+                case '0':
+                case '1':
+                case '2':
+                case '3':
+                case '4':
+                case '5':
+                case '6':
+                case '7':
+                case '8':
+                case '9':
+                    document.getElementById('numero').value += caracter
+                break;
+                default:
+                document.getElementById('letras').value += caracter
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" placeholder="digite um caracter aqui" onkeyup="distribuiCaracter()" id="entradaTexto">
+
+    <hr>
+    <span>letras</span>
+    <input type="text" disabled id="letras">
+    <span>numeros</span>
+    <input type="text" disabled id="numero">
+
+</body>
+
+</html>
